@@ -7,7 +7,7 @@ class Category extends React.Component {
     let playlist = []
 
     for (let movie of movies) {
-      playlist.push(<Movie key={movie.id} name={movie.name} />)      
+      playlist.push(<Movie key={movie.id} movie={movie} />)      
     }
     return playlist;
   }

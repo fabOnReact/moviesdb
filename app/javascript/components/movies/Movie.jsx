@@ -5,9 +5,11 @@ import { Playbill } from "./Playbill"
 export class Movie extends React.Component {
   render () {
     return (
-      <div className="col-sm-12">
-        <h1>Name: {this.props.name}</h1>
-        <Playbill src={this.props.image}/>
+      <div className="row">
+        <div className="col-sm-4">
+          <h1>Name: {this.props.movie.name}</h1>
+          <Playbill src={this.props.movie.image}/>
+        </div>
       </div>
     );
   }
