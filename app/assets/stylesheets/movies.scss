@@ -1,7 +1,12 @@
 [data-react-class="movies/Category"] { height: 100%; }
 
 // Category
-.row { height: 100%; display: flex; align-content: flex-start; }
+.row { 
+  height: 100%; display: flex; 
+  align-content: flex-start; background-color: black;
+  padding: 0 0;
+  margin: 0 0;
+}
 
 // Movie
 .movie { 
