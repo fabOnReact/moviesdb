@@ -1,3 +1,11 @@
-// Place all the styles related to the movies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+[data-react-class="movies/Category"] { height: 100%; }
+
+// Category
+.row { height: 100%; display: flex; align-content: flex-start; }
+
+// Movie
+.movie { 
+  background-size: cover; background-repeat: no-repeat;
+  background-position: top; height: 50%; 
+  h1 { color: white; }
+}

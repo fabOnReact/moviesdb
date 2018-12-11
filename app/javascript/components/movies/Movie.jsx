@@ -4,13 +4,10 @@ import { Playbill } from "./Playbill"
 
 export class Movie extends React.Component {
   render () {
+    const movie = this.props.movie
+    const background= { backgroundImage: "url(" + movie.image + ")"}
     return (
-      <div className="row">
-        <div className="col-sm-4">
-          <h1>Name: {this.props.movie.name}</h1>
-          <Playbill src={this.props.movie.image}/>
-        </div>
-      </div>
+      <div className="col-md-2 col-6 movie" style={background}/>
     );
   }
 }
