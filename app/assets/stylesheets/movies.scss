@@ -2,15 +2,18 @@
 
 // Category
 .row { 
-  height: 100%; display: flex; 
-  align-content: flex-start; background-color: black;
-  padding: 0 0;
-  margin: 0 0;
+  height: 100%;
+  &, .playbill, .movie { padding: 0 0; margin: 0 0; }
+  display: flex; align-content: flex-start; background-color: black;
+  .movie { height: 50%; }
+  .movie, .options { width: 100% }
+  // .options { width: 100%; height: 10%; }
 }
 
-// Movie
-.movie { 
-  background-size: cover; background-repeat: no-repeat;
-  background-position: top; height: 50%; 
-  h1 { color: white; }
+.background-cover { 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: top; 
 }
+
+.flex-row-end { display: flex; align-items: flex-end; }

@@ -6,10 +6,11 @@ export class Options extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Link src="/favorite"/>
-        <Link src="/favorite"/>
-        <Link src="/favorite"/>
-        <Link src="/favorite"/>
+        <div className="options">
+          <Link src="/download" image="arrow"/>
+          <Link src="/trailer" image="trailer"/>
+          <Link src="/wishlist" image="wishlist"/>
+        </div>
       </React.Fragment>
     );
   }
