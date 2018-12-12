@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Image } from "./Image"
-import { Icons } from "../../variables/Icons"
+import { Metadata } from "./Metadata"
+// import { Icons } from "../../variables/Icons"
 import Add from 'images/add.png'
 import Remove from 'images/remove.png'
 import Play from 'images/play-button.png'
@@ -11,12 +12,10 @@ import Like from 'images/like.png'
 import Unlike from 'images/unlike.png'
 
 export class Options extends React.Component {
-
   render () {
     const add = {not_selected: Remove, selected: Add}
     const play = {not_selected: Play, selected: Play}
     const download = {not_selected: Download, selected: Finished}
-    const like = {not_selected: Like, selected: Unlike}
     return (
       <React.Fragment>
         <div className="options">
@@ -26,7 +25,7 @@ export class Options extends React.Component {
             <Image images={download} />
           </div>
           <div className="meta">
-            <Image className="metadata" images={like} />
+            <Metadata onClick={this.props.onMetadataClick} image={Like} />
           </div>
         </div>
       </React.Fragment>
