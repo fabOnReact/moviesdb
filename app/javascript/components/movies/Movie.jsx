@@ -8,7 +8,8 @@ export class Movie extends React.Component {
     const background= { backgroundImage: "url(" + movie.image + ")"}
     return (
       <React.Fragment>
-        <div className="col-md-2 col-6 movie background-cover flex-row-end" style={background}>
+        <div className="col-md-2 col-6 playbill">
+          <div className="movie background-cover" style={background}/> 
           <Options wishlist={movie.wishlist} trailer={movie.trailer} score={movie.score}/>
         </div>
       </React.Fragment>

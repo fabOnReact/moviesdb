@@ -5,9 +5,10 @@
   height: 100%;
   &, .playbill, .movie { padding: 0 0; margin: 0 0; }
   display: flex; align-content: flex-start; background-color: black;
-  .movie { height: 50%; }
-  .movie, .options { width: 100% }
-  // .options { width: 100%; height: 10%; }
+  .playbill { height: 50%; }
+  .playbill, .options { width: 100% }
+  .movie { height: 90%; }
+  .options { display: flex; justify-content: space-evenly; height: 10%; }
 }
 
 .background-cover { 

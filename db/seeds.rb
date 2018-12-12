@@ -1,7 +1,6 @@
-# images = %w(https://m.media-amazon.com/images/M/MV5BMTQyNzk2MjA2NF5BMl5BanBnXkFtZTgwMjEwNzk3MjE@._V1_SY999_CR0,0,674,999_AL_.jpg https://walter.trakt.tv/images/movies/000/016/662/posters/thumb/a7f71cbc67.jpg.webp https://walter.trakt.tv/images/movies/000/014/701/posters/thumb/293ce7103a.jpg.webp https://walter.trakt.tv/images/movies/000/192/487/posters/thumb/deef7a5830.jpg.webp https://walter.trakt.tv/images/movies/000/102/156/posters/thumb/d9cb9de8ed.jpg.webp https://walter.trakt.tv/images/movies/000/210/803/posters/thumb/553f8f7e8c.jpg.webp https://walter.trakt.tv/images/movies/000/211/396/posters/thumb/fcf02ce179.jpg.webp https://walter.trakt.tv/images/movies/000/183/371/posters/thumb/8767195506.jpg.webp https://walter.trakt.tv/images/movies/000/172/700/posters/thumb/60063c7db3.jpg.webp https://walter.trakt.tv/images/movies/000/205/127/posters/thumb/59972d4fb2.jpg.webp https://walter.trakt.tv/images/movies/000/075/735/posters/thumb/388b63b780.jpg.webp)
 host = "https://s3.eu-central-1.amazonaws.com/moviedatabase1/"
 
-names = %w(Jupiter INCEPTION Avengers WonderWoman INTERSTELLAR ARRIVAL "Rouge ONE" "The Martian" Passengers "John Wick2" "The Wolf of Wall Street Django")
+names = %w(Jupiter INCEPTION Avengers WonderWoman INTERSTELLAR ARRIVAL Rouge\ ONE The\ Martian Passengers John\ Wick2 The\ Wolf\ of\ Wall\ Street Django)
 images = %w(jupiter.jpg inception.jpeg avengers.jpeg wonderwoman.jpeg interstellar.jpeg arrival.jpeg rougueone.png themartian.jpeg passengers.jpeg johnwick2.jpeg thewolf.jpg django.jpeg)
 
 names.size.times {|i| Movie.create(image: "#{host}#{images[i]}", name: names[i]) } 
