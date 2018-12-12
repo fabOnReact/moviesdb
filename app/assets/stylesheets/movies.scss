@@ -14,7 +14,7 @@
     justify-content: space-between; height: 10%; 
     background-color: #1d1d1d; border: 1px solid #4f5151;
     align-items: center;
-    .actions { display: flex; width: 45%; justify-content: space-around; height: 75%; }
+    .actions { display: flex; justify-content: space-around; align-items: center; width: 45%; height: 75%; }
     .meta { display: flex; align-items: center; width: 15%; justify-content: center; }
    }
 }
