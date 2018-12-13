@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Image } from "./Image"
 import { Metadata } from "./Metadata"
-// import { Icons } from "../../variables/Icons"
 import Add from 'images/add.png'
 import Remove from 'images/remove.png'
 import Play from 'images/play-button.png'
