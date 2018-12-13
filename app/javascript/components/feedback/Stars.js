@@ -1,18 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-import StarIcon from "images/star.png"
-import NoStarIcon from "images/no_star.png"
+import { Star } from "./Star"
 
 export class Stars extends React.Component {
   render () {
+    const n = 5;
     return (
       <React.Fragment>
         <div className="stars">
-          <img src={NoStarIcon} />
-          <img src={NoStarIcon} />
-          <img src={NoStarIcon} />
-          <img src={NoStarIcon} />
-          <img src={NoStarIcon} />
+          { [...Array(n)].map((e, i) => <Star key={i} />) } 
         </div>
       </React.Fragment>
     );
