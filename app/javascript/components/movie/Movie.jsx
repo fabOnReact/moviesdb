@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Options } from "./Options"
-import { Feedback } from "./Feedback"
+import { Feedback } from "../feedback/Feedback"
 
 export class Movie extends React.Component {
   constructor(props){
@@ -11,14 +11,11 @@ export class Movie extends React.Component {
   }
 
   changePoster(){
-    console.log("changePoster()")
     const new_state = this.state.display ? false : true
     this.setState({display: new_state})
   }
 
   updateClass(){
-    console.log("updateClass()")
-    console.log(this.state.display ? "col-md-2 col-6 playbill" : "col-md-2 col-6 playbill")
     this.state.display ? "col-md-2 col-6 playbill" : "col-md-2 col-6 playbill"
   }
 

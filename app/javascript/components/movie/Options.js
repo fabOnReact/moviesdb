@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Image } from "./Image"
-import { Metadata } from "./Metadata"
+import { Image } from "../tag/Image"
+import { Metadata } from "../tag/Metadata"
 import Add from 'images/add.png'
 import Remove from 'images/remove.png'
 import Play from 'images/play-button.png'
@@ -12,7 +12,7 @@ import Unlike from 'images/unlike.png'
 
 export class Options extends React.Component {
   render () {
-    const add = {not_selected: Remove, selected: Add}
+    const add = {not_selected: Add, selected: Remove}
     const play = {not_selected: Play, selected: Play}
     const download = {not_selected: Download, selected: Finished}
     return (
