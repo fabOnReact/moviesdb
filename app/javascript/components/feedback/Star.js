@@ -25,7 +25,10 @@ export class Star extends React.Component {
   render () {
     return (
       <React.Fragment>
+        {/*
         <img onClick={this.changeColor} src={NoStarIcon} ref={this.ref} id={this.props.number}/>
+        */}
+        <img src={this.props.src} onClick={this.props.changeState} ref={this.ref} id={this.props.id} />
       </React.Fragment>
     );
   }
