@@ -6,18 +6,26 @@ import NoStarIcon from "images/no_star.png"
 export class Star extends React.Component {
   constructor(props){
     super(props);
-    this.state = { star: false, highlighted: false }
+    this.state = { highlighted: false }
     this.changeColor = this.changeColor.bind(this)
+    this.ref = React.createRef();
   }
-
+  
+  // finish this ref.. it is always false.. it is executed only once, but 
+  // in the ref you have what you need
   changeColor(){
-    this.setState({highlighted: !this.state.highlighted})
+    console.log("the props number is " + this.props.number)
+    console.log(this.ref.current.id)
+    console.log(this.props.number < this.ref.current.id)
+    if (this.props.number < this.ref.current.id) {
+      this.setState({highlighted: !this.state.highlighted})
+    }
   }
 
   render () {
     return (
       <React.Fragment>
-      <img onClick={this.changeColor} src={this.state.highlighted ? StarIcon : NoStarIcon} />
+        <img onClick={this.changeColor} src={NoStarIcon} ref={this.ref} id={this.props.number}/>
       </React.Fragment>
     );
   }
