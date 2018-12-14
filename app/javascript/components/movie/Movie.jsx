@@ -6,7 +6,7 @@ import { Feedback } from "../feedback/Feedback"
 export class Movie extends React.Component {
   constructor(props){
     super(props);
-    this.state = { display: true }
+    this.state = { display: false }
     this.changePoster = this.changePoster.bind(this)
   }
 
