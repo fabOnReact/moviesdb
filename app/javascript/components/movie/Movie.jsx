@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Options } from "./Options"
 import { Feedback } from "../feedback/Feedback"
 
+// Category
 export class Movie extends React.Component {
   constructor(props){
     super(props);
@@ -15,15 +16,15 @@ export class Movie extends React.Component {
     this.setState({display: new_state})
   }
 
-  updateClass(){
-    this.state.display ? "col-md-2 col-6 playbill" : "col-md-2 col-6 playbill"
-  }
+  // updateClass(){
+  //   this.state.display ? "col-md-2 col-6 playbill" : "col-md-2 col-6 playbill"
+  // }
 
   render () {
     const movie = this.props.movie
     const background= { backgroundImage: "url(" + movie.image + ")"}
     if (this.state.display) { 
-        return <Feedback />;
+        return <Feedback hideFeedbackForm={this.changePoster} />;
     } 
     return (
       <React.Fragment>
@@ -42,3 +43,4 @@ Movie.propTypes = {
 };
 
 export default Movie
+// Options

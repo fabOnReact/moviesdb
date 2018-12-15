@@ -13,10 +13,8 @@ export class Feedback extends React.Component {
   }
 
   changeState(){
-    console.log('changeState')
     const icons = Array(5).fill(NoStarIcon) 
     this.setState({icons: icons.fill(StarIcon, 0, event.target.id)})
-    console.log(this.state.icons)
   }
 
   render () {
@@ -26,8 +24,8 @@ export class Feedback extends React.Component {
         <div className="stars">
           { [0,1,2,3,4].map((i) => <Star src={this.state.icons[i]} changeState={this.changeState} key={i} id={i+1} />) }
         </div>
-        <button className='btn btn-primary'>back</button>
-        {/*<button className='btn btn-warning'>submit</button>*/}
+        <button className='btn btn-primary' onClick={this.props.hideFeedbackForm} >back</button>
+        <button className='btn btn-warning'>submit</button>
       </div>
     )
   }
