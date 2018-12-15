@@ -8,14 +8,21 @@ import NoStarIcon from "images/no_star.png"
 export class Feedback extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { icons: [NoStarIcon, NoStarIcon, NoStarIcon, NoStarIcon, NoStarIcon] };
+    this.state = { icons: [NoStarIcon, NoStarIcon, NoStarIcon, NoStarIcon, NoStarIcon], submit: false };
     this.changeState = this.changeState.bind(this);
+    this.onButtonClick = this.onButtonClick.bind(this);
   }
 
   changeState(){
     const icons = Array(5).fill(NoStarIcon) 
-    this.setState({icons: icons.fill(StarIcon, 0, event.target.id)})
+    this.setState({icons: icons.fill(StarIcon, 0, event.target.id), submit: true})
   }
+
+  onButtonClick(){
+    this.state.submit ? this.submitRating() : this.props.hideFeedbackForm()
+  }
+
+  submitRating(){ console.log("Submit Rating"); this.props.hideFeedbackForm() }
 
   render () {
     return (
@@ -24,8 +31,8 @@ export class Feedback extends React.Component {
         <div className="stars">
           { [0,1,2,3,4].map((i) => <Star src={this.state.icons[i]} changeState={this.changeState} key={i} id={i+1} />) }
         </div>
-        <button className='btn btn-primary' onClick={this.props.hideFeedbackForm} >back</button>
-        <button className='btn btn-warning'>submit</button>
+        <button className='btn btn-primary' 
+          onClick={this.onButtonClick}>{this.state.submit ? "Submit" : "back" }</button>
       </div>
     )
   }

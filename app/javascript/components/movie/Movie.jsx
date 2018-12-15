@@ -16,10 +16,6 @@ export class Movie extends React.Component {
     this.setState({display: new_state})
   }
 
-  // updateClass(){
-  //   this.state.display ? "col-md-2 col-6 playbill" : "col-md-2 col-6 playbill"
-  // }
-
   render () {
     const movie = this.props.movie
     const background= { backgroundImage: "url(" + movie.image + ")"}
