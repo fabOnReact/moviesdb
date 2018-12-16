@@ -12,7 +12,7 @@ export default class Notification extends React.Component {
     event.preventDefault();
     const notification = this.notificationSystem.current;
     notification.addNotification({
-      message: 'Notification message',
+      message: 'Added to favorites',
       level: 'success'
     });
   };

@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import NotificationSystem from 'react-notification-system'
 import { Image } from "../tag/Image"
 import { Metadata } from "../tag/Metadata"
 import Add from 'images/add.png'
@@ -11,15 +12,32 @@ import Like from 'images/like.png'
 import Unlike from 'images/unlike.png'
 
 export class Options extends React.Component {
+  constructor(props){
+    super(props);
+    this.notificationSystem = React.createRef();
+    this.state = { add: Add }
+    this.changeState = this.changeState.bind(this);
+  }
+
+  changeState(){ this.setState({ add: Remove})};
+
+
+  addNotification = event => {
+    event.preventDefault();
+    const notification = this.notificationSystem.current;
+    notification.addNotification({ message: 'Added to favorites', level: 'success' });
+    this.changeState();
+  };
+
   render () {
-    const add = {not_selected: Add, selected: Remove}
     const play = {not_selected: Play, selected: Play}
     const download = {not_selected: Download, selected: Finished}
     return (
       <React.Fragment>
         <div className="options">
           <div className="actions">
-            <Image images={add} />
+            <img src={this.state.add} onClick={this.addNotification}/>
+            <NotificationSystem ref={this.notificationSystem} />
             <Image images={play} />
             <Image images={download} />
           </div>
