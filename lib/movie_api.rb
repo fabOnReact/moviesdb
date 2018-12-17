@@ -4,7 +4,7 @@ require 'json'
 class MovieApi 
   ENDPOINT="https://api.themoviedb.org"
   VERSION=3
-  attr_reader :configuration, :trending
+  attr_reader :configuration, :trending, :trending_params
   def endpoint; "#{ENDPOINT}/#{VERSION}"; end
   def key; "api_key=#{ENV['TMDB_API_KEY']}"; end
 
@@ -25,5 +25,9 @@ class MovieApi
 
   def response_to_json
     JSON.parse(@response.body.to_s, symbolize_names: true)
+  end
+
+  def trending_params
+    @trending_params =  @trending.map {|attributes| ActionController::Parameters.new(attributes).permit(:overview, :poster_path, :release_date, :title, :vote_average)}
   end
 end
