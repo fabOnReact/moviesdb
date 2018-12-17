@@ -41,6 +41,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'factory_bot'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -59,3 +60,5 @@ gem 'webpacker'
 gem 'react-rails'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.3'
+gem 'http'
+gem 'sidekiq'

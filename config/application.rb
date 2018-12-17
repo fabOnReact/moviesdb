@@ -29,5 +29,8 @@ module Movietrack
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Sidekiq configuration for ActiveJobs
+    config.active_job.queue_adapter = :sidekiq
   end
 end
