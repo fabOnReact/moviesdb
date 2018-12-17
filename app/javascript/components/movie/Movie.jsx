@@ -17,8 +17,9 @@ export class Movie extends React.Component {
   }
 
   render () {
+    const url = "http://image.tmdb.org/t/p/w300/"
     const movie = this.props.movie
-    const background= { backgroundImage: "url(" + movie.image + ")"}
+    const background= { backgroundImage: "url(" + url + movie.poster_path + ")"}
     if (this.state.display) { 
         return <Feedback hideFeedbackForm={this.changePoster} />;
     } 

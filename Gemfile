@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot'
   gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -62,3 +63,4 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'http'
 gem 'sidekiq'
+gem 'whenever', require: false
