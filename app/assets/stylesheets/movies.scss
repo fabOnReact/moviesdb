@@ -1,27 +1,32 @@
 @import 'movies/_feedback';
 
-[data-react-class="movies/Category"] { height: 100%; }
-[data-react-class="movie/Movie"] { height: 100%; }
+[data-react-class="movies/Category"], [data-react-class="movie/Movie"], .movie { height: 100%; }
 .row, .playbill, .movie { padding: 0 0; margin: 0 0; }
+.row, .playbill, .options { width: 100% }
+.options { 
+  justify-content: space-between; height: 10%; 
+  .actions { justify-content: space-around; width: 45%; height: 75%; }
+  .meta { width: 15%; justify-content: center; }
+ }
 
-// Category
+// movies/index.html
 .row { 
   &, .options, .options .actions, .meta { display: flex }
   .options, .actions, .meta { align-items: center; }
-  &, .playbill, .options { width: 100% }
   height: 100vh;
   align-content: flex-start;
   .playbill { height: 50%; }
   .movie { height: 90%; }
   img { height: 18px; }
-  .options { 
-    justify-content: space-between; height: 10%; 
-    background-color: #1d1d1d; border: 1px solid #4f5151;
-    .actions { justify-content: space-around; width: 45%; height: 75%; }
-    .meta { width: 15%; justify-content: center; }
-   }
+  .options { background-color: #1d1d1d; border: 1px solid #4f5151;}
 }
 
+// movies/show.html
+.movie { 
+  display: flex; 
+  .options { display: flex; align-items: center; justify-content: space-around; }}
+
+// Others 
 .background-cover { 
     background-size: cover; 
     background-repeat: no-repeat; 
