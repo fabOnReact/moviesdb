@@ -37,7 +37,6 @@ export class Options extends React.Component {
         <div className="options">
           <div className="actions">
             <img src={this.state.add} onClick={this.addNotification}/>
-            <NotificationSystem ref={this.notificationSystem} />
             <Image images={play} />
             <Image images={download} />
           </div>
@@ -45,6 +44,7 @@ export class Options extends React.Component {
             <Metadata onClick={this.props.onMetadataClick} image={Like} />
           </div>
         </div>
+        <NotificationSystem ref={this.notificationSystem} />
       </React.Fragment>
     );
   }

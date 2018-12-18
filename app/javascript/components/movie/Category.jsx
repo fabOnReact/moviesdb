@@ -1,12 +1,12 @@
 import React from 'react'
-import { Movie } from './Movie'
+import { Playbill } from './Playbill'
 
 class Category extends React.Component {
   render() {
     let movies = this.props.movies;
 
     return(
-      <div className="row">{movies.map(movie => <Movie movie={movie} key={movie.id}/>)}</div>
+      <div className="row">{movies.map(movie => <Playbill movie={movie} key={movie.id}/>)}</div>
     )
   } 
 }
