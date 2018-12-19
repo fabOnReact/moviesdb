@@ -20,7 +20,7 @@ export class Movie extends React.Component {
     const background= { backgroundImage: "url(" + url + movie.poster_path + ")"}
     return (
       <React.Fragment>
-        <div className="movie background-cover" style={background} >
+        <div className="movie background-cover" style={background}>
           <div className="overview"><p>{this.props.movie.overview}</p></div>
         </div>
       </React.Fragment>
