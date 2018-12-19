@@ -1,2 +1,10 @@
 body { height: 100vh; }
 .hidden { display: none; }
+
+.background-cover { 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: top; 
+}
+
+@import 'partials/_buttons';

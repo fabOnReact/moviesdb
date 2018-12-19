@@ -9,6 +9,7 @@
     "react-dom": "^16.6.3",
     "react-motion": "^0.5.2",
     "react-notification-system": "^0.2.17",
+    "react-transition-group": "1.x",
     "react_ujs": "^2.4.4"
   },
   "devDependencies": {

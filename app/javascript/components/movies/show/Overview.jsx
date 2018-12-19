@@ -21,7 +21,7 @@ export class Overview extends React.Component {
     const item = <div className="todo-item" key={this.key}>{this.state.overview}</div>
     return (
       <React.Fragment>
-        <div className="btn btn-primary" 
+        <div className="btn btn-primary btn-md" 
              onClick={this.handleAdd}>Overview</div>
            <CSSTransitionGroup
              transitionName="transition"

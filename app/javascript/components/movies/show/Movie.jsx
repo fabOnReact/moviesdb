@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {Motion, spring} from 'react-motion'
+import Overview from './Overview'
+// import {Motion, spring} from 'react-motion'
 
 export class Movie extends React.Component {
   constructor(props){
@@ -21,7 +22,7 @@ export class Movie extends React.Component {
     return (
       <React.Fragment>
         <div className="movie background-cover" style={background}>
-          <div className="overview"><p>{this.props.movie.overview}</p></div>
+          <Overview movie={this.props.movie}/>
         </div>
       </React.Fragment>
     );
