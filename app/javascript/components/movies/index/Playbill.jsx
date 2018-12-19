@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Options } from "./Options"
-import { Feedback } from "../feedback/Feedback"
+import { Feedback } from "../../feedback/Feedback"
 
 // Category
 export class Playbill extends React.Component {

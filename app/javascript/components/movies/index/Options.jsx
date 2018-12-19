@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import NotificationSystem from 'react-notification-system'
-import { Image } from "../tag/Image"
-import { Metadata } from "../tag/Metadata"
+import { Image } from "../../tag/Image"
+import { Metadata } from "../../tag/Metadata"
 import Add from 'images/add.png'
 import Remove from 'images/remove.png'
 import Play from 'images/play-button.png'

@@ -1,6 +1,6 @@
 @import 'movies/_feedback';
 
-[data-react-class="movies/Category"], [data-react-class="movie/Movie"], .movie { height: 100%; }
+[data-react-class="movies/show/Movie"], .movie { height: 100%; } // [data-react-class="movies/Category"], 
 .row, .playbill, .movie { padding: 0 0; margin: 0 0; }
 .row, .playbill, .options { width: 100% }
 .options { 
@@ -23,8 +23,10 @@
 
 // movies/show.html
 .movie { 
-  display: flex; 
-  .options { display: flex; align-items: center; justify-content: space-around; }}
+  display: flex; flex-direction: column; justify-content: flex-end; 
+  // .options { display: flex; align-items: center; justify-content: space-around; }
+  .overview { background-color: white; }
+}
 
 // Others 
 .background-cover { 
@@ -32,5 +34,3 @@
     background-repeat: no-repeat; 
     background-position: top; 
 }
-
-//.container { padding: 1rem; } 

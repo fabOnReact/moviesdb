@@ -64,3 +64,4 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'http'
 gem 'sidekiq'
 gem 'whenever', require: false
+gem 'themoviedb'

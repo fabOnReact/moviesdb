@@ -1,7 +1,8 @@
 require 'http'
 require 'json'
 
-class MovieApi 
+# https://github.com/ahmetabdi/themoviedb
+class MovieApi
   ENDPOINT="https://api.themoviedb.org"
   VERSION=3
   attr_reader :configuration, :trending, :trending_params
