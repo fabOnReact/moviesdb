@@ -26,7 +26,7 @@ export class Playbill extends React.Component {
     return (
       <React.Fragment>
         <div className='col-md-2 col-6 playbill'>
-          <a href={"/movies/" + movie.id}><div className="movie background-cover" style={background}/></a>
+          {/*<a href={"/movies/" + movie.id}>*/}<div className="movie background-cover" style={background}/>{/*</a>*/}
           <Options wishlist={movie.wishlist} trailer={movie.trailer} score={movie.score} onMetadataClick={this.changePoster} />
         </div>
       </React.Fragment>

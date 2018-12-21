@@ -19,13 +19,17 @@ export class Options extends React.Component {
     this.changeState = this.changeState.bind(this);
   }
 
-  changeState(){ this.setState({ add: Remove})};
+  changeState(){ 
+    const new_image = this.state.add == Add ? Remove : Add;
+    this.setState({ add: new_image});
+  };
 
 
   addNotification = event => {
     event.preventDefault();
     const notification = this.notificationSystem.current;
-    notification.addNotification({ message: 'Added to favorites', level: 'success' });
+    const text = this.state.add == Add ? "Added to favorites" : "Removed from favorites"
+    notification.addNotification({ message: text, level: 'success' });
     this.changeState();
   };
 

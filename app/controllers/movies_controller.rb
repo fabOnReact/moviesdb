@@ -7,4 +7,6 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     puts @movie
   end
+
+  def update; end
 end
