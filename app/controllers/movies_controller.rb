@@ -1,12 +1,11 @@
 class MoviesController < ApplicationController
+  before_action :set_api
+
   def index
-    @movies = Movie.all
+    @movies = Tmdb::Movie.popular
+    @movies = Tmdb::Genre.detail(params[:genre].to_i).results if params[:genre]
   end
 
-  def show
-    @movie = Movie.find(params[:id])
-    puts @movie
-  end
-
-  def update; end
+  private 
+  def set_api; Tmdb::Api.key(ENV['TMDB_API_KEY']); end
 end

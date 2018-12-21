@@ -14,7 +14,7 @@
 .row { 
   &, .options, .options .actions, .meta { display: flex }
   .options, .actions, .meta { align-items: center; }
-  height: 100vh;
+  height: 95vh;
   align-content: flex-start;
   .playbill { height: 50%; }
   .movie { height: 90%; }
