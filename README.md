@@ -1,3 +1,4 @@
+**DEVELOPMENT PAUSED**
 The app is built with react and rails.
 
 ```
